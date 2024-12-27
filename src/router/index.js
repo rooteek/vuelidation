@@ -17,6 +17,17 @@ const routes = [
     component: Dashboard,
     meta: { requiresAuth: true }, // Protect this route
   },
+  // validation 2
+  {
+    path: "/login-2",
+    name: "custom-login",
+    component: () => import('../views/second-validation/login.vue')
+  },
+  {
+    path: "/dashboard-2",
+    name: "custom-dashboard",
+    component: () => import('../views/second-validation/dashboard.vue')
+  }
 ];
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
