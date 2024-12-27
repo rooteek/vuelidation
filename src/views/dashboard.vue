@@ -5,15 +5,12 @@
     </div>
 </template>
 
-<script>
-export default {
-    methods: {
-        logout() {
-            localStorage.removeItem('isAuthenticated');
-            this.$router.push('/login');
-        },
-    },
-};
+<script setup>
+import router from '@/router';
+function logout() {
+    localStorage.removeItem('isAuthenticated');
+    router.push('/login');
+}
 </script>
 
 <style>
